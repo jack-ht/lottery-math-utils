@@ -2,10 +2,10 @@
   "name": "@htsoft/lottery-math-utils",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/jack-ht/lottery-math-utils.git",
+  "homepage": "https://www.npmjs.com/package/@htsoft/lottery-math-utils.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jack-ht/lottery-math-utils.git"
+    "url": "git+https://github.com/jack-ht/lottery-math-utils.git"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -44,5 +44,16 @@
     "fs-extra": "^9.1.0",
     "minimist": "^1.2.5",
     "solidity-coverage": "^0.7.16"
-  }
+  },
+  "description": "1. To install run:     ```     npm i @htsoft/lottery-math-utils     ``` 1. To use import:     ```     import { addresses } from \"@htsoft/auction-contracts/dist/addresses\";     ```",
+  "bugs": {
+    "url": "https://github.com/jack-ht/lottery-math-utils/issues"
+  },
+  "keywords": [
+    "Lottery",
+    "Smartcontracts",
+    "Blockchain"
+  ],
+  "author": "Jack",
+  "license": "MIT"
 }
