@@ -2,7 +2,7 @@
   "name": "@htsoft/lottery-math-utils",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://www.npmjs.com/package/@htsoft/lottery-math-utils.git",
+  "homepage": "https://www.npmjs.com/package/@htsoft/lottery-math-utils",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jack-ht/lottery-math-utils.git"
@@ -45,7 +45,7 @@
     "minimist": "^1.2.5",
     "solidity-coverage": "^0.7.16"
   },
-  "description": "1. To install run:     ```     npm i @htsoft/lottery-math-utils     ``` 1. To use import:     ```     import { addresses } from \"@htsoft/auction-contracts/dist/addresses\";     ```",
+  "description": "Lottery Random contracts using Chainlink VRF",
   "bugs": {
     "url": "https://github.com/jack-ht/lottery-math-utils/issues"
   },
