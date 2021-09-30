@@ -23,7 +23,6 @@ interface RandomNumberConsumerInterface extends ethers.utils.Interface {
   functions: {
     "getLotteryNumber(uint256)": FunctionFragment;
     "getRandomNumber()": FunctionFragment;
-    "governance()": FunctionFragment;
     "nonces(bytes32)": FunctionFragment;
     "randomResults(uint256)": FunctionFragment;
     "rawFulfillRandomness(bytes32,uint256)": FunctionFragment;
@@ -37,10 +36,6 @@ interface RandomNumberConsumerInterface extends ethers.utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "getRandomNumber",
-    values?: undefined
-  ): string;
-  encodeFunctionData(
-    functionFragment: "governance",
     values?: undefined
   ): string;
   encodeFunctionData(functionFragment: "nonces", values: [BytesLike]): string;
@@ -69,7 +64,6 @@ interface RandomNumberConsumerInterface extends ethers.utils.Interface {
     functionFragment: "getRandomNumber",
     data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: "governance", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "nonces", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "randomResults",
@@ -150,10 +144,6 @@ export class RandomNumberConsumer extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    governance(overrides?: CallOverrides): Promise<[string]>;
-
-    "governance()"(overrides?: CallOverrides): Promise<[string]>;
-
     nonces(arg0: BytesLike, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     "nonces(bytes32)"(
@@ -226,10 +216,6 @@ export class RandomNumberConsumer extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  governance(overrides?: CallOverrides): Promise<string>;
-
-  "governance()"(overrides?: CallOverrides): Promise<string>;
-
   nonces(arg0: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
   "nonces(bytes32)"(
@@ -294,10 +280,6 @@ export class RandomNumberConsumer extends Contract {
     getRandomNumber(overrides?: CallOverrides): Promise<string>;
 
     "getRandomNumber()"(overrides?: CallOverrides): Promise<string>;
-
-    governance(overrides?: CallOverrides): Promise<string>;
-
-    "governance()"(overrides?: CallOverrides): Promise<string>;
 
     nonces(arg0: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -371,10 +353,6 @@ export class RandomNumberConsumer extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    governance(overrides?: CallOverrides): Promise<BigNumber>;
-
-    "governance()"(overrides?: CallOverrides): Promise<BigNumber>;
-
     nonces(arg0: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
     "nonces(bytes32)"(
@@ -444,10 +422,6 @@ export class RandomNumberConsumer extends Contract {
     "getRandomNumber()"(
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
-
-    governance(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    "governance()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     nonces(
       arg0: BytesLike,
